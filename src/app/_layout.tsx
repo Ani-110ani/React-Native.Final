@@ -9,9 +9,17 @@ export default function RootLayout() {
       <CartProvider>
         <StatusBar style="dark" />
         <Stack screenOptions={{ headerShown: false }}>
+          <Stack.Screen name="index" />
+          <Stack.Screen name="login" />
+          <Stack.Screen name="register" />
+          <Stack.Screen name="(tabs)" />
           <Stack.Screen
-            name="product/[id]"
-            options={{ headerShown: true, title: "Product details" }}
+            name="product"
+            options={{
+              headerShown: true,
+              title: "Product details",
+              headerBackTitle: "Back",
+            }}
           />
           <Stack.Screen name="camera" options={{ presentation: "modal" }} />
         </Stack>

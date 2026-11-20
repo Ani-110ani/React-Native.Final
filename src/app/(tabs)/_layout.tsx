@@ -23,7 +23,7 @@ export default function TabsLayout() {
         options={{
           title: "Products",
           tabBarIcon: ({ color, size }) => (
-            <Ionicons name="grid-outline" size={size} color={color} />
+            <Ionicons name="grid-outline" size={size} color={color as string} />
           ),
         }}
       />
@@ -33,7 +33,7 @@ export default function TabsLayout() {
           title: "Cart",
           tabBarBadge: count > 0 ? count : undefined,
           tabBarIcon: ({ color, size }) => (
-            <Ionicons name="cart-outline" size={size} color={color} />
+            <Ionicons name="cart-outline" size={size} color={color as string} />
           ),
         }}
       />
@@ -42,7 +42,11 @@ export default function TabsLayout() {
         options={{
           title: "Profile",
           tabBarIcon: ({ color, size }) => (
-            <Ionicons name="person-outline" size={size} color={color} />
+            <Ionicons
+              name="person-outline"
+              size={size}
+              color={color as string}
+            />
           ),
         }}
       />
